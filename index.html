@@ -5,7 +5,7 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
+  //  document.addEventListener("DOMContentLoaded", function() {
     const sceneEl = document.querySelector('a-scene');
     const arSystem = sceneEl.systems["mindar-image-system"];
     const exampleTarget = document.querySelector('#example-target');
@@ -55,10 +55,10 @@
     });
 
     // detect click event
-    examplePlane.addEventListener("click", event => {
-      console.log("plane click");
-    });
-      });
+    // examplePlane.addEventListener("click", event => {
+    //   console.log("plane click");
+    // });
+   //   });
     </script>
 
   </head>
