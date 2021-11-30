@@ -4,60 +4,20 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
-    <script>
-  //  document.addEventListener("DOMContentLoaded", function() {
    
-    // const startButton = document.querySelector("#example-start-button");
-    // const stopButton = document.querySelector("#example-stop-button");
-    // const pauseButton = document.querySelector("#example-pause-button");
-    // const pauseKeepVideoButton = document.querySelector("#example-pause-keep-video-button");
-    // const unpauseButton = document.querySelector("#example-unpause-button");
+  </head>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-    // startButton.addEventListener('click', () => {
-    //   console.log("start");
-    //   arSystem.start(); // start AR 
-    // });
-    // stopButton.addEventListener('click', () => {
-    //   arSystem.stop(); // stop AR 
-    // });
-    // pauseButton.addEventListener('click', () => {
-    //   arSystem.pause(); // pause AR, keep video feed
-    // });
-    // pauseKeepVideoButton.addEventListener('click', () => {
-    //   arSystem.pause(true); // pause AR and video
-    // });
-    // unpauseButton.addEventListener('click', () => {
-    //   arSystem.unpause(); // unpause AR and video
-    // });
 
-    // arReady event triggered when ready
-    // sceneEl.addEventListener("arReady", (event) => {
-    //   // console.log("MindAR is ready")
-    // });
+<a-entity id="targets" mindar-image-target="targetIndex: 0">
+   <a-plane color="red" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+</a-entity>
 
-    // // arError event triggered when something went wrong. Mostly browser compatbility issue
-    // sceneEl.addEventListener("arError", (event) => {
-    //   // console.log("MindAR failed to start")
-    // });
-
-    // // detect target found
-    // exampleTarget.addEventListener("targetFound", event => {
-    //   console.log("target found");
-    // });
-
-    // // detect target lost
-    // exampleTarget.addEventListener("targetLost", event => {
-    //   console.log("target lost");
-    // });
-
-    // detect click event
-    // examplePlane.addEventListener("click", event => {
-    //   console.log("plane click");
-    // });
-   //   });
-     // detect target found
-      
-      
+   
+    </a-scene>
+     <script>
       const curTarget = document.querySelector('#targets');
       curTarget.addEventListener("targetFound", event => {
         console.log("target found");
@@ -68,21 +28,5 @@
         console.log("target lost");
       });
     </script>
-
-  </head>
-
-
-
-  <body>
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-
-
-<a-entity id="targets" mindar-image-target="targetIndex: 0">
-   <a-plane color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
-</a-entity>
-
-   
-    </a-scene>
   </body>
 </html>
