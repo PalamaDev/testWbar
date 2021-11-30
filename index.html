@@ -6,10 +6,8 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/dist/mindar-image-aframe.prod.js"></script>
     <script>
   //  document.addEventListener("DOMContentLoaded", function() {
-    const sceneEl = document.querySelector('a-scene');
-    const arSystem = sceneEl.systems["mindar-image-system"];
+   
     const exampleTarget = document.querySelector('#example-target');
-    const examplePlane = document.querySelector('#example-plane');
 
     // const startButton = document.querySelector("#example-start-button");
     // const stopButton = document.querySelector("#example-stop-button");
@@ -35,14 +33,14 @@
     // });
 
     // arReady event triggered when ready
-    sceneEl.addEventListener("arReady", (event) => {
-      // console.log("MindAR is ready")
-    });
+    // sceneEl.addEventListener("arReady", (event) => {
+    //   // console.log("MindAR is ready")
+    // });
 
-    // arError event triggered when something went wrong. Mostly browser compatbility issue
-    sceneEl.addEventListener("arError", (event) => {
-      // console.log("MindAR failed to start")
-    });
+    // // arError event triggered when something went wrong. Mostly browser compatbility issue
+    // sceneEl.addEventListener("arError", (event) => {
+    //   // console.log("MindAR failed to start")
+    // });
 
     // detect target found
     exampleTarget.addEventListener("targetFound", event => {
